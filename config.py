@@ -26,20 +26,20 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "")
-    API_HASH  = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
+    API_ID    = os.environ.get("API_ID", "8143727")
+    API_HASH  = os.environ.get("API_HASH", "e2e9b22c6522465b62d8445840a526b1")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6203200548:AAF-3gSX-nl0L3W8xJLiG7MeGwsW1gTU7Ao") 
    
     # database config
     DB_NAME = os.environ.get("DB_NAME","pyro-botz")     
-    DB_URL  = os.environ.get("DB_URL","")
+    DB_URL  = os.environ.get("DB_URL","mongodb+srv://noname:noname@cluster0.v1nuafm.mongodb.net/?retryWrites=true&w=majority")
  
     # other configs
     BOT_UPTIME  = time.time()
     START_PIC   = os.environ.get("START_PIC", "")
-    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '').split()]
-    FORCE_SUB   = os.environ.get("FORCE_SUB", "") 
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", None))
+    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '1813305809').split()]
+    FORCE_SUB   = os.environ.get("FORCE_SUB", "-1001980316965") 
+    LOG_CHANNEL = -1001980316965
 
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", True))
